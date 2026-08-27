@@ -489,7 +489,7 @@ elif menu == "📂 Eventos Anteriores":
 
 # --- 8. CONTATO ---
 elif menu == "📞 Contato":
-    mostrar_cabecalho("capa0.jpg")
+    mostrar_cabecalho("PORTAL0.png")
     st.subheader("📞 Fale Conosco")
     st.write("Entre em contato com a comissão organizadora para dúvidas sobre submissões, inscrições ou certificados.")
     st.markdown("---")
