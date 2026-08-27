@@ -93,7 +93,7 @@ elif menu == "🎟️ Eventos e Inscrições":
     st.markdown("---")
     
     if "Jornada Científica" in evento_selecionado:
-        st.image("logo_jornada.png.jpg", width=400)
+        st.image("POTAL.png", width=400)
         st.markdown("### 🩺 Jornada Científica do Curso de Fisioterapia")
         st.write("""
         * **Público-alvo:** Estudantes, docentes, profissionais e pesquisadores.
