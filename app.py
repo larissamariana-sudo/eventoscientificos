@@ -78,62 +78,63 @@ if menu == "🏠 Início / Sobre":
 
 # --- 2. EVENTOS E INSCRIÇÕES ---
 elif menu == "🎟️ Eventos e Inscrições":
-    mostrar_cabecalho("PORTAL.png")
+    mostrar_cabecalho("PORTAL0.jpg")
     st.subheader("🎟️ Programação de Eventos e Cursos Disponíveis")
     st.write("Selecione abaixo o evento de seu interesse para ver os detalhes, consultar a programação e realizar a inscrição.")
     
     evento_selecionado = st.selectbox("Escolha o Evento:", [
-        "1. Minicurso Prático: NotebookLM, como utilizar?", 
-        "2. Minicurso Prático: EM BREVE", 
-        "3. Workshop: A Psicohistória e as Leis da Robótica de Azimov aplicadas à IA",
+        "1. Jornada Científica do Curso de Fisioterapia", 
+        "2. Minicurso Prático: Reabilitação e Terapia Manual", 
+        "3. Workshop: Inovação e Tecnologias em Saúde",
         "4. Simpósio de Saúde Coletiva e Políticas Públicas",
-        "5. Encontro Científico Inteligência Artificial"
+        "5. Encontro Científico Docente"
     ])
     
     st.markdown("---")
     
-    if "Minicurso Prático: NotebookLM, como utilizar?" in evento_selecionado:
-        st.image("PORTAL.png", width=400)
-        st.markdown("### 🩺 Minicirso Prático")
+    if "Jornada Científica" in evento_selecionado:
+        st.image("logo_jornada.png.jpg", width=400)
+        st.markdown("### 🩺 Jornada Científica do Curso de Fisioterapia")
         st.write("""
         * **Público-alvo:** Estudantes, docentes, profissionais e pesquisadores.
         * **Investimento:** 
-        * **Data:** 
-          * Estudantes: **15,00**.
-          * Docentes e Profissionais: **R$ 25,00** (Standby mediante comprovante na chave `eventoscientificosc@gmail.com`)
-          
+          * Estudantes, Docentes e Banca da PUC Goiás: **Gratuito**.
+          * Participantes Externos: **R$ 10,00** (Standby mediante comprovante na chave `eventoscientificosc@gmail.com`).
+        * **Destaque:** Permite submissão de Resumos Simples, Expandidos e Artigos Completos com ISBN gratuito.
+        """)
+        st.markdown("### **EIXOS TEMÁTICOS**")
+        st.write("**Fisioterapia Musculo Esquelética, Neurológica, Cardiorrespiratória, Terapia Intensiva, Geriatria e Gerontologia, Saúde da Mulher, Saúde Coletiva, Tecnologias e Inteligência Artificial na Saúde e Outras Áreas.**")
+        st.warning("⚠️ **Atenção para inscrições pagas:** Ficarão em status de **Standby** até a validação do comprovante.")
+        
         st.markdown("---")
         st.markdown("#### 📅 Programação do Evento")
-        st.write("Consulte os horários")
-        st.link_button("📅 Ver / Baixar Programação EM BREVE", "COLE_LINK_PROGRAMACAO_JORNADA")
+        st.write("Consulte os horários, apresentações de Projeto de Pesquisa e Trabalhos de Conclusão de Curso:")
+        st.link_button("📅 Ver / Baixar Programação da Jornada EM BREVE", "COLE_LINK_PROGRAMACAO_JORNADA")
         
     elif "Minicurso Prático" in evento_selecionado:
-        st.markdown("### 🤲 Minicurso Prático: EM BREVE?")
+        st.markdown("### 🤲 Minicurso Prático: Reabilitação e Terapia Manual")
         st.write("Detalhes e práticas avançadas em terapia manual para acadêmicos e profissionais.")
-        * **Data:** 
         st.markdown("#### 📅 Programação do Evento")
         st.link_button("📅 Ver / Baixar Programação do Minicurso EM BREVE", "COLE_LINK_PROGRAMACAO_MINICURSO")
         
     elif "Workshop" in evento_selecionado:
-        st.markdown("### 💡 Workshop: A Psicohistória e as Leis da Robótica de Azimov aplicadas à IA")
-        st.write("Discussão sobre tecnologias e inteligência artificial.")
-        * **Data:** 
+        st.markdown("### 💡 Workshop: Inovação e Tecnologias em Saúde")
+        st.write("Discussão sobre novas tecnologias e o futuro da reabilitação e saúde.")
         st.markdown("#### 📅 Programação do Evento")
         st.link_button("📅 Ver / Baixar Programação do Workshop EM BREVE", "COLE_LINK_PROGRAMACAO_WORKSHOP")
         
     elif "Simpósio de Saúde Coletiva" in evento_selecionado:
         st.markdown("### 📊 Simpósio de Saúde Coletiva e Políticas Públicas")
-        * **Data:** 
         st.write("Debates e mesas-redondas sobre o impacto das políticas públicas na saúde.")
         st.markdown("#### 📅 Programação do Evento")
         st.link_button("📅 Ver / Baixar Programação do Simpósio EM BREVE", "COLE_LINK_PROGRAMACAO_SIMPOSIO")
         
     elif "Encontro Científico" in evento_selecionado:
-        st.markdown("### 🎓 Encontro Científico Inteligência Artificial")
-        * **Data:** 
+        st.markdown("### 🎓 Encontro Científico Docente")
         st.write("""
-        st.markdown("### **EIXOS TEMÁTICOS**")
-        st.warning("⚠️ **Atenção para inscrições pagas:** Ficarão em status de **Standby** até a validação do comprovante.")
+        * **Foco:** Integração científica dos acadêmicos da graduação.
+        * **Investimento:** Gratuito para a comunidade acadêmica da FST.
+        """)
         st.markdown("#### 📅 Programação do Evento")
         st.link_button("📅 Ver / Baixar Programação do Encontro EM BREVE", "COLE_LINK_PROGRAMACAO_ENCONTRO")
     
