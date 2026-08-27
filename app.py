@@ -8,7 +8,7 @@ from reportlab.platypus import Paragraph
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 
 st.set_page_config(
-    page_title="Science Nexus Plataforma | Saúde • Sociedade • Tecnologias • Humanidades",
+    page_title="Eventos Científicos | Saúde • Sociedade • Tecnologias • Humanidades",
     page_icon="🩺",
     layout="wide"
 )
@@ -41,7 +41,7 @@ def carregar_dados_planilha(link_planilha):
     return None
 
 # --- FUNÇÃO DE CABEÇALHO ---
-def mostrar_cabecalho(foto="capa0.jpg"):
+def mostrar_cabecalho(foto="PORTAL.png"):
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         st.image(foto, width=600)
@@ -67,9 +67,9 @@ menu = st.sidebar.selectbox("Navegue pelo Portal:", [
 
 # --- 1. INÍCIO ---
 if menu == "🏠 Início / Sobre":
-    mostrar_cabecalho("capa0.jpg")
-    st.subheader("Bem-vindo à Science Nexus, Plataforma de Eventos Científicos na Saúde, Sociedade, Tecnologias, Humanidades")
-    st.write("Central oficial de gestão acadêmica, submissão de resumos, acompanhamento de avaliação e publicação de anais.")
+    mostrar_cabecalho("PORTAL.png")
+    st.subheader("Bem-vindo ao Portal de Eventos Científicos na Saúde, Sociedade, Tecnologias, Humanidades")
+    st.write("Portal de gestão acadêmica, submissão de resumos, acompanhamento de avaliação e publicação de anais.")
     st.markdown("""
     * **Inscrições:** Gratuitas para PUC Goiás / Pagas (Standby) para externos mediante envio de comprovante.
     * **Submissões:** Realizadas via formulário específico com normas detalhadas por modalidade.
@@ -78,63 +78,67 @@ if menu == "🏠 Início / Sobre":
 
 # --- 2. EVENTOS E INSCRIÇÕES ---
 elif menu == "🎟️ Eventos e Inscrições":
-    mostrar_cabecalho("PORTAL0.jpg")
+    mostrar_cabecalho("PORTAL.png")
     st.subheader("🎟️ Programação de Eventos e Cursos Disponíveis")
     st.write("Selecione abaixo o evento de seu interesse para ver os detalhes, consultar a programação e realizar a inscrição.")
     
     evento_selecionado = st.selectbox("Escolha o Evento:", [
-        "1. Jornada Científica do Curso de Fisioterapia", 
-        "2. Minicurso Prático: Reabilitação e Terapia Manual", 
-        "3. Workshop: Inovação e Tecnologias em Saúde",
+        "1. Minicurso Prático: NotebookLM, como utilizar?", 
+        "2. Minicurso Prático: EM BREVE", 
+        "3. Workshop: A Psicohistória e as Leis da Robótica de Azimov aplicadas à IA",
         "4. Simpósio de Saúde Coletiva e Políticas Públicas",
-        "5. Encontro Científico Docente"
+        "5. Encontro Científico Inteligência Artificial"
     ])
     
     st.markdown("---")
     
-    if "Jornada Científica" in evento_selecionado:
-        st.image("logo_jornada.png.jpg", width=400)
-        st.markdown("### 🩺 Jornada Científica do Curso de Fisioterapia")
+    if "Minicurso Prático: NotebookLM, como utilizar?" in evento_selecionado:
+        st.image("PORTAL.png", width=400)
+        st.markdown("### 🩺 Minicirso Prático")
         st.write("""
         * **Público-alvo:** Estudantes, docentes, profissionais e pesquisadores.
         * **Investimento:** 
-          * Estudantes, Docentes e Banca da PUC Goiás: **Gratuito**.
-          * Participantes Externos: **R$ 10,00** (Standby mediante comprovante na chave `eventoscientificosc@gmail.com`).
-        * **Destaque:** Permite submissão de Resumos Simples, Expandidos e Artigos Completos com ISBN gratuito.
-        """)
-        st.markdown("### **EIXOS TEMÁTICOS**")
-        st.write("**Fisioterapia Musculo Esquelética, Neurológica, Cardiorrespiratória, Terapia Intensiva, Geriatria e Gerontologia, Saúde da Mulher, Saúde Coletiva, Tecnologias e Inteligência Artificial na Saúde e Outras Áreas.**")
-        st.warning("⚠️ **Atenção para inscrições pagas:** Ficarão em status de **Standby** até a validação do comprovante.")
-        
+        * **Data:** 
+          * Estudantes: **15,00**.
+          * Docentes e Profissionais: **R$ 25,00** (Standby mediante comprovante na chave `eventoscientificosc@gmail.com`)
+          
         st.markdown("---")
         st.markdown("#### 📅 Programação do Evento")
-        st.write("Consulte os horários, apresentações de Projeto de Pesquisa e Trabalhos de Conclusão de Curso:")
-        st.link_button("📅 Ver / Baixar Programação da Jornada EM BREVE", "COLE_LINK_PROGRAMACAO_JORNADA")
+        st.write("Consulte os horários")
+        st.link_button("📅 Ver / Baixar Programação EM BREVE", "COLE_LINK_PROGRAMACAO_JORNADA")
         
     elif "Minicurso Prático" in evento_selecionado:
-        st.markdown("### 🤲 Minicurso Prático: Reabilitação e Terapia Manual")
+        st.markdown("### 🤲 Minicurso Prático: EM BREVE?")
         st.write("Detalhes e práticas avançadas em terapia manual para acadêmicos e profissionais.")
+        * **Data:** 
         st.markdown("#### 📅 Programação do Evento")
         st.link_button("📅 Ver / Baixar Programação do Minicurso EM BREVE", "COLE_LINK_PROGRAMACAO_MINICURSO")
         
     elif "Workshop" in evento_selecionado:
-        st.markdown("### 💡 Workshop: Inovação e Tecnologias em Saúde")
-        st.write("Discussão sobre novas tecnologias e o futuro da reabilitação e saúde.")
+        st.markdown("### 💡 Workshop: A Psicohistória e as Leis da Robótica de Azimov aplicadas à IA")
+        st.write("Discussão sobre tecnologias e inteligência artificial.")
+        * **Data:** 
         st.markdown("#### 📅 Programação do Evento")
         st.link_button("📅 Ver / Baixar Programação do Workshop EM BREVE", "COLE_LINK_PROGRAMACAO_WORKSHOP")
         
     elif "Simpósio de Saúde Coletiva" in evento_selecionado:
         st.markdown("### 📊 Simpósio de Saúde Coletiva e Políticas Públicas")
+        * **Data:** 
         st.write("Debates e mesas-redondas sobre o impacto das políticas públicas na saúde.")
         st.markdown("#### 📅 Programação do Evento")
         st.link_button("📅 Ver / Baixar Programação do Simpósio EM BREVE", "COLE_LINK_PROGRAMACAO_SIMPOSIO")
         
     elif "Encontro Científico" in evento_selecionado:
-        st.markdown("### 🎓 Encontro Científico Docente")
+        st.markdown("### 🎓 Encontro Científico Inteligência Artificial")
+        * **Data:** 
         st.write("""
         * **Foco:** Integração científica dos acadêmicos da graduação.
         * **Investimento:** Gratuito para a comunidade acadêmica da FST.
         """)
+        * **Destaque:** Permite submissão de Resumos Simples, Expandidos e Artigos Completos com ISBN gratuito.
+        """)
+        st.markdown("### **EIXOS TEMÁTICOS**")
+        st.warning("⚠️ **Atenção para inscrições pagas:** Ficarão em status de **Standby** até a validação do comprovante.")
         st.markdown("#### 📅 Programação do Evento")
         st.link_button("📅 Ver / Baixar Programação do Encontro EM BREVE", "COLE_LINK_PROGRAMACAO_ENCONTRO")
     
@@ -496,6 +500,49 @@ elif menu == "📞 Contato":
     st.info("📧 **E-mail oficial de suporte:** eventoscientificosc@gmail.com")
     st.write("Nossa equipe responderá sua mensagem em até 48 horas úteis.")
 
+from datetime import datetime
+
+# Obter o ano atual dinamicamente para o copyright
+ano_atual = datetime.now().year
+
+# --- ESTILIZAÇÃO CSS PARA O RODAPÉ ---
+st.markdown("""
+    <style>
+    .footer-box {
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 13px;
+        color: #555555;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 # --- RODAPÉ ---
 st.markdown("---")
-st.markdown("<p style='text-align: center; color: gray;'>Saúde, Sociedade, Tecnologias, Humanidades</p>", unsafe_allow_html=True)
+
+# 1. Copyright e Direitos Autorais
+st.markdown(f"<p style='text-align: center; color: gray; font-size: 14px;'>© {ano_atual} OLIVEIRA, L.M.V. Todos os direitos reservados.</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: gray; font-size: 13px;'>O conteúdo deste website (textos, imagens e dados) está protegido pela Lei de Direitos Autorais (Lei nº 9.610/1998).</p>", unsafe_allow_html=True)
+
+# 2. Inserção da Licença Creative Commons BY-NC-SA 4.0
+st.markdown("""
+<p style='text-align: center; font-size: 13px;'>
+    Esta obra está licenciada sob uma Licença <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt-br" target="_blank">Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional</a>.
+</p>
+""", unsafe_allow_html=True)
+
+# 3. Caixa de citação acadêmica formatada
+st.markdown("""
+<div class='footer-box'>
+    <strong>Como citar este site:</strong><br>
+    OLIVEIRA, L.M.V. <em>Science Nexus Plataforma</em>. Disponível em: &lt;www.sciencenexus.com.br&gt;. Acesso em: [Data de Acesso].
+</div>
+""", unsafe_allow_html=True)
+
+# 4. Assinatura da marca
+st.markdown("<p style='text-align: center; color: gray; font-size: 13px;'>Science Nexus Plataforma | Saúde • Sociedade • Tecnologias • Humanidades</p>", unsafe_allow_html=True)
