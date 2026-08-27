@@ -132,11 +132,6 @@ elif menu == "🎟️ Eventos e Inscrições":
         st.markdown("### 🎓 Encontro Científico Inteligência Artificial")
         * **Data:** 
         st.write("""
-        * **Foco:** Integração científica dos acadêmicos da graduação.
-        * **Investimento:** Gratuito para a comunidade acadêmica da FST.
-        """)
-        * **Destaque:** Permite submissão de Resumos Simples, Expandidos e Artigos Completos com ISBN gratuito.
-        """)
         st.markdown("### **EIXOS TEMÁTICOS**")
         st.warning("⚠️ **Atenção para inscrições pagas:** Ficarão em status de **Standby** até a validação do comprovante.")
         st.markdown("#### 📅 Programação do Evento")
