@@ -41,7 +41,7 @@ def carregar_dados_planilha(link_planilha):
     return None
 
 # --- FUNÇÃO DE CABEÇALHO ---
-def mostrar_cabecalho(foto="PORTAL.png"):
+def mostrar_cabecalho(foto="PORTAL0.png"):
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         st.image(foto, width=600)
@@ -67,7 +67,7 @@ menu = st.sidebar.selectbox("Navegue pelo Portal:", [
 
 # --- 1. INÍCIO ---
 if menu == "🏠 Início / Sobre":
-    mostrar_cabecalho("PORTAL.png")
+    mostrar_cabecalho("PORTAL0.png")
     st.subheader("Bem-vindo ao Portal de Eventos Científicos na Saúde, Sociedade, Tecnologias, Humanidades")
     st.write("Portal de gestão acadêmica, submissão de resumos, acompanhamento de avaliação e publicação de anais.")
     st.markdown("""
@@ -249,7 +249,7 @@ elif menu == "✍️ Trabalhos Científicos":
 
 # --- 4. CERTIFICADOS E VALIDAÇÃO ---
 elif menu == "🎓 Certificados e Validação":
-    mostrar_cabecalho("capa0.jpg")
+    mostrar_cabecalho("PORTAL.png")
     st.subheader("🎓 Central de Certificados e Validação")
     tab1, tab2 = st.tabs(["📜 Emitir Certificado", "🛡️ Validar Autenticidade por Código"])
     
@@ -450,13 +450,13 @@ elif menu == "💳 Taxa de DOI Individual":
 
 # --- 6. ANAIS ---
 elif menu == "📚 Anais Publicados":
-    mostrar_cabecalho("capa0.jpg")
+    mostrar_cabecalho("PORTAL0.png")
     st.subheader("📚 Repositório Oficial de Anais")
     st.link_button("📥 Baixar Anais", "COLE_LINK_PDF_ANAIS_AQUI")
 
 # --- 7. EVENTOS ANTERIORES ---
 elif menu == "📂 Eventos Anteriores":
-    mostrar_cabecalho("capa0.jpg")
+    mostrar_cabecalho("PORTAL0.png")
     st.subheader("📂 Repositório de Eventos Anteriores")
     st.write("Acesse abaixo os acervos, anais e emissão de certificados de edições passadas do nosso portal de eventos.")
     
