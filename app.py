@@ -83,18 +83,18 @@ elif menu == "🎟️ Eventos e Inscrições":
     st.write("Selecione abaixo o evento de seu interesse para ver os detalhes, consultar a programação e realizar a inscrição.")
     
     evento_selecionado = st.selectbox("Escolha o Evento:", [
-        "1. Jornada Científica do Curso de Fisioterapia", 
-        "2. Minicurso Prático: Reabilitação e Terapia Manual", 
-        "3. Workshop: Inovação e Tecnologias em Saúde",
+        "1. Jornada Científica Inteligência Artificial", 
+        "2. Minicurso Prático: NotebookLM, como utilizar?", 
+        "3. Workshop: As Leis da Robótica de Azimov Aplicadas à IA",
         "4. Simpósio de Saúde Coletiva e Políticas Públicas",
-        "5. Encontro Científico Docente"
+        "5. Encontro Científico PsicoHistória"
     ])
     
     st.markdown("---")
     
     if "Jornada Científica" in evento_selecionado:
-        st.image("PORTAL.png", width=400)
-        st.markdown("### 🩺 Jornada Científica do Curso de Fisioterapia")
+        st.image("PORTAL0.png", width=400)
+        st.markdown("### 🩺 Jornada Científica Inteligência Artificial")
         st.write("""
         * **Público-alvo:** Estudantes, docentes, profissionais e pesquisadores.
         * **Investimento:** 
@@ -103,7 +103,7 @@ elif menu == "🎟️ Eventos e Inscrições":
         * **Destaque:** Permite submissão de Resumos Simples, Expandidos e Artigos Completos com ISBN gratuito.
         """)
         st.markdown("### **EIXOS TEMÁTICOS**")
-        st.write("**Fisioterapia Musculo Esquelética, Neurológica, Cardiorrespiratória, Terapia Intensiva, Geriatria e Gerontologia, Saúde da Mulher, Saúde Coletiva, Tecnologias e Inteligência Artificial na Saúde e Outras Áreas.**")
+        st.write("**Inteligência Artificial na Saúde e Outras Áreas.**")
         st.warning("⚠️ **Atenção para inscrições pagas:** Ficarão em status de **Standby** até a validação do comprovante.")
         
         st.markdown("---")
@@ -112,13 +112,13 @@ elif menu == "🎟️ Eventos e Inscrições":
         st.link_button("📅 Ver / Baixar Programação da Jornada EM BREVE", "COLE_LINK_PROGRAMACAO_JORNADA")
         
     elif "Minicurso Prático" in evento_selecionado:
-        st.markdown("### 🤲 Minicurso Prático: Reabilitação e Terapia Manual")
+        st.markdown("### 🤲 Minicurso Prático: NotebookLM, como utilizar?")
         st.write("Detalhes e práticas avançadas em terapia manual para acadêmicos e profissionais.")
         st.markdown("#### 📅 Programação do Evento")
         st.link_button("📅 Ver / Baixar Programação do Minicurso EM BREVE", "COLE_LINK_PROGRAMACAO_MINICURSO")
         
     elif "Workshop" in evento_selecionado:
-        st.markdown("### 💡 Workshop: Inovação e Tecnologias em Saúde")
+        st.markdown("### 💡 Workshop: As Leis da Robótica de Azimov Aplicadas à IA")
         st.write("Discussão sobre novas tecnologias e o futuro da reabilitação e saúde.")
         st.markdown("#### 📅 Programação do Evento")
         st.link_button("📅 Ver / Baixar Programação do Workshop EM BREVE", "COLE_LINK_PROGRAMACAO_WORKSHOP")
@@ -130,7 +130,7 @@ elif menu == "🎟️ Eventos e Inscrições":
         st.link_button("📅 Ver / Baixar Programação do Simpósio EM BREVE", "COLE_LINK_PROGRAMACAO_SIMPOSIO")
         
     elif "Encontro Científico" in evento_selecionado:
-        st.markdown("### 🎓 Encontro Científico Docente")
+        st.markdown("### 🎓 Encontro Científico PsicoHistória")
         st.write("""
         * **Foco:** Integração científica dos acadêmicos da graduação.
         * **Investimento:** Gratuito para a comunidade acadêmica da FST.
@@ -155,7 +155,7 @@ elif menu == "🎟️ Eventos e Inscrições":
 
 # --- 3. TRABALHOS (SUBMISSÃO + STATUS) ---
 elif menu == "✍️ Trabalhos Científicos":
-    mostrar_cabecalho("capa0.jpg")
+    mostrar_cabecalho("PORTAL0.png")
     st.subheader("✍️ Central de Trabalhos Científicos")
     st.write("Consulte abaixo as normas e utilize o link do formulário exclusivo para enviar o seu arquivo Word (.doc/.docx).")
     
@@ -249,7 +249,7 @@ elif menu == "✍️ Trabalhos Científicos":
 
 # --- 4. CERTIFICADOS E VALIDAÇÃO ---
 elif menu == "🎓 Certificados e Validação":
-    mostrar_cabecalho("PORTAL.png")
+    mostrar_cabecalho("PORTAL0.png")
     st.subheader("🎓 Central de Certificados e Validação")
     tab1, tab2 = st.tabs(["📜 Emitir Certificado", "🛡️ Validar Autenticidade por Código"])
     
@@ -442,7 +442,7 @@ elif menu == "🎓 Certificados e Validação":
 
 # --- 5. DOI ---
 elif menu == "💳 Taxa de DOI Individual":
-    mostrar_cabecalho("capa0.jpg")
+    mostrar_cabecalho("PORTAL0.png")
     st.subheader("💳 Solicitação e Pagamento de DOI Individual")
     st.write("A publicação nos Anais oficiais com ISBN é gratuita. O DOI individual é opcional (R$ 20,00).")
     st.info("ℹ️ **Chave PIX:** eventoscientificosc@gmail.com")
