@@ -6,7 +6,7 @@ from datetime import datetime
 ano_atual = datetime.now().year
 
 st.set_page_config(
-    page_title="Science Nexus Plataforma | Saúde • Sociedade • Tecnologias • Humanidades",
+    page_title="Portal de Eventos Científicos | Saúde • Sociedade • Tecnologias • Humanidades",
     page_icon="🩺",
     layout="wide"
 )
@@ -52,7 +52,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- FUNÇÕES DE ESTILO (Imagem menor, centralizada e aplicada em todas as abas) ---
-def mostrar_cabecalho(foto="capa0.jpg"):
+def mostrar_cabecalho(foto="PORTAL0.png"):
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         try:
@@ -82,9 +82,9 @@ menu = st.sidebar.selectbox("Navegue pelo Portal:", [
 
 # --- 1. INÍCIO ---
 if menu == "🏠 Início / Sobre":
-    mostrar_cabecalho("capa0.jpg")
-    st.subheader("Bem-vindo à Science Nexus Plataforma Científica")
-    st.write("Central oficial de gestão acadêmica, submissão de resumos, acompanhamento de avaliação e publicação de anais.")
+    mostrar_cabecalho("PORTAL.png")
+    st.subheader("Bem-vindo ao Portal de Eventos Científicos")
+    st.write("Central de gestão acadêmica, submissão de resumos, acompanhamento de avaliação e publicação de anais.")
     st.markdown("""
     * **Inscrições:** Gratuitas para PUC Goiás / Pagas (Standby) para externos mediante envio de comprovante.
     * **Submissões:** Realizadas via formulário específico com normas detalhadas por modalidade.
