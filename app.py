@@ -52,7 +52,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- FUNÇÕES DE ESTILO (Imagem menor, centralizada e aplicada em todas as abas) ---
-def mostrar_cabecalho(foto="PORTAL0.png"):
+def mostrar_cabecalho(foto="PORTAL.png"):
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         try:
