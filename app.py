@@ -52,7 +52,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- FUNÇÕES DE ESTILO (Imagem menor, centralizada e aplicada em todas as abas) ---
-def mostrar_cabecalho(foto="PORTAL.png"):
+def mostrar_cabecalho(foto="PORTAL0.png"):
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         try:
@@ -82,7 +82,7 @@ menu = st.sidebar.selectbox("Navegue pelo Portal:", [
 
 # --- 1. INÍCIO ---
 if menu == "🏠 Início / Sobre":
-    mostrar_cabecalho("PORTAL.png")
+    mostrar_cabecalho("PORTAL0.png")
     st.subheader("Bem-vindo ao Portal de Eventos Científicos")
     st.write("Central de gestão acadêmica, submissão de resumos, acompanhamento de avaliação e publicação de anais.")
     st.markdown("""
@@ -94,7 +94,7 @@ if menu == "🏠 Início / Sobre":
 
 # --- 2. EVENTOS E INSCRIÇÕES ---
 elif menu == "🎟️ Eventos e Inscrições":
-    mostrar_cabecalho("eventos.png")
+    mostrar_cabecalho("PORTAL0.png")
     st.subheader("🎟️ Programação de Eventos e Cursos Disponíveis")
     st.write("Selecione abaixo o evento de seu interesse para ver os detalhes, consultar a programação e realizar a inscrição.")
     
@@ -111,7 +111,7 @@ elif menu == "🎟️ Eventos e Inscrições":
     
     # Determina quais categorias de inscrição mostrar com base no evento selecionado
     if "Jornada Científica" in evento_selecionado:
-        st.image("logo_jornada.png.jpg", width=400)
+        st.image("PORTAL0.png", width=400)
         st.markdown("### 🩺 Jornada Científica do Curso de Fisioterapia")
         st.write("""
         * **Público-alvo:** Estudantes, docentes, profissionais e pesquisadores.
@@ -138,7 +138,7 @@ elif menu == "🎟️ Eventos e Inscrições":
         ]
 
     elif "Mostra Extensionista da Graduação em Fisioterapia" in evento_selecionado:
-        st.image("extensao.jpg", width=400)
+        st.image("PORTAL0.png", width=400)
         st.markdown("### 🩺 Mostra Extensionista da Graduação em Fisioterapia")
         st.write("""
         * **Público-alvo:** Estudantes e docentes do curso de Fisioterapia.
@@ -345,7 +345,7 @@ elif menu == "✍️ Trabalhos Científicos":
 
 # --- 4. CERTIFICADOS E VALIDAÇÃO ---
 elif menu == "🎓 Certificados e Validação":
-    mostrar_cabecalho("capa0.jpg")
+    mostrar_cabecalho("PORTAL0.png")
     st.subheader("🎓 Certificados")
     tab1, tab2 = st.tabs(["📜 Certificado enviado por email", "🛡️ Validar Autenticidade por Código"])
     
@@ -390,14 +390,14 @@ elif menu == "🎓 Certificados e Validação":
 
 # --- 5. DOI/ISBN ---
 elif menu == "💳 Taxa de DOI Individual/Pessoal":
-    mostrar_cabecalho("capa0.jpg")
+    mostrar_cabecalho("PORTAL0.png")
     st.subheader("💳 Solicitação e Pagamento de DOI Individual")
     st.write("O DOI individual é opcional (R$ 20,00).")
     st.info("ℹ️ **Chave PIX:** eventoscientificosc@gmail.com")
     st.link_button("🔗 Link para Solicitação DOI", "https://forms.gle/J1FArsU2fYT7nHU26")
 
 elif menu == "💳 Taxa de ISBN Coletivo":
-    mostrar_cabecalho("capa0.jpg")
+    mostrar_cabecalho("PORTAL0.png")
     st.subheader("💳 Solicitação e Pagamento de ISBN Coletivo")
     st.write("Taxa única ISBN, para o documento que conterá todos os resumos dos Anais (R$ 35,00).")
     st.info("ℹ️ **Chave PIX:** eventoscientificosc@gmail.com")
@@ -405,14 +405,14 @@ elif menu == "💳 Taxa de ISBN Coletivo":
 
 # --- 6. ANAIS ---
 elif menu == "📚 Anais Publicados":
-    mostrar_cabecalho("capa0.jpg")
+    mostrar_cabecalho("PORTAL0.png")
     st.subheader("📚 Repositório Oficial de Anais")
     st.link_button("📥 Baixar Anais Jornada Científica 2026/2", "COLE_LINK_PDF_ANAIS_AQUI")
     st.link_button("📥 Baixar Anais Mostra Extensionista 2026", "COLE_LINK_PDF_ANAIS_AQUI") 
 
 # --- 7. EVENTOS ANTERIORES ---
 elif menu == "📂 Eventos Anteriores":
-    mostrar_cabecalho("capa0.jpg")
+    mostrar_cabecalho("PORTAL0.png")
     st.subheader("📂 Repositório de Eventos Anteriores")
     st.write("Acesse abaixo os acervos, anais e emissão de certificados de edições passadas do nosso portal de eventos.")
     
@@ -472,9 +472,9 @@ st.markdown("""
 st.markdown("""
 <div class='footer-box'>
     <strong>Como citar este site:</strong><br>
-    OLIVEIRA, L.M.V. <em>Science Nexus Plataforma</em>. Disponível em: &lt;www.sciencenexus.com.br&gt;. Acesso em: [Data de Acesso].
+    OLIVEIRA, L.M.V. <em>Portal de Eventos CIentíficos</em>. Disponível em: &lt;https://eventoscientificos.streamlit.app/&gt;. Acesso em: [Data de Acesso].
 </div>
 """, unsafe_allow_html=True)
 
 # 4. Assinatura da marca
-st.markdown("<p style='text-align: center; color: gray; font-size: 13px;'>Science Nexus Plataforma | Saúde • Sociedade • Tecnologias • Humanidades</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: gray; font-size: 13px;'>Portal de Eventos Científicos | Saúde • Sociedade • Tecnologias • Humanidades</p>", unsafe_allow_html=True)
